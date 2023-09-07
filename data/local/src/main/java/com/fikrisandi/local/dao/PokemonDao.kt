@@ -13,7 +13,7 @@ interface PokemonDao : BaseDao<PokemonEntity> {
 
     @Query(
         "SELECT DISTINCT * FROM ${PokemonEntity.NAME} " +
-                "WHERE name LIKE '%' || :search || '%' OR :search = ''" +
+                "WHERE name LIKE '%' || :search || '%' OR :search = '' " +
                 "ORDER BY CASE WHEN :sort = 'ASC' THEN NAME END ASC," +
                 "CASE WHEN :sort = 'DESC' THEN NAME END DESC " +
                 "LIMIT :limit OFFSET :offset"

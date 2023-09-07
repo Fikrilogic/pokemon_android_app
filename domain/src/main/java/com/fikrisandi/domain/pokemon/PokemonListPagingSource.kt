@@ -37,17 +37,11 @@ class PokemonListPagingSource(
             if (entities.isEmpty()) {
                 try {
                     val response = repository.getAll(params.loadSize, page * params.loadSize)
-                    response.results.map {
+                    entities = response.results.map {
                         val data = it.toEntity()
-                        repository.save(data)
                         data
                     }
-                    entities = repository.getAllLocal(
-                        params.loadSize,
-                        page * params.loadSize,
-                        sort,
-                        search
-                    )
+                    repository.saveAll(entities)
                 } catch (e: Exception) {
                     Log.e(this.classTag, e.message.orEmpty())
                 }

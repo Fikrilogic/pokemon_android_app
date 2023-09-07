@@ -9,8 +9,8 @@ data class PokemonEntity(
     @PrimaryKey(true) var id: Int = 0,
     @ColumnInfo var name: String = "",
     @ColumnInfo var url: String = "",
-){
-    companion object{
+) {
+    companion object {
         const val NAME = "pokemon"
     }
 }

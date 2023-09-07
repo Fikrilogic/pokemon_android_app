@@ -19,4 +19,6 @@ interface PokemonRepository {
     suspend fun save(data: PokemonEntity)
 
     suspend fun saveAll(data: List<PokemonEntity>)
+
+    suspend fun update(data: PokemonEntity)
 }

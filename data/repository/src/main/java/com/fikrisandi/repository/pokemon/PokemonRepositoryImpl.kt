@@ -50,4 +50,8 @@ class PokemonRepositoryImpl @Inject constructor(
         dao.insert(data)
     }
 
+    override suspend fun update(data: PokemonEntity) {
+        dao.update(data)
+    }
+
 }
