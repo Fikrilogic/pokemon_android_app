@@ -27,7 +27,7 @@ fun DetailData(modifier: Modifier = Modifier, data: PokemonDto) {
         modifier = modifier
     ) {
         Text(
-            "Pikachu",
+            data.name,
             style = PokemonsThemeTypography.headlineLarge,
             fontWeight = FontWeight.Bold
         )

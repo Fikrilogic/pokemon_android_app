@@ -28,7 +28,7 @@ class SplashScreenActivity : ComponentActivity() {
     private fun launchMainActivity() {
         launchActivity(
             packageName = packageName,
-            className = "com.fikrisandi.pokemonapps"
+            className = "com.fikrisandi.pokemonapps.navigation.MainActivity"
         ).also {
             finish()
         }

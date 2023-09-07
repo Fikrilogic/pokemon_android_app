@@ -1,4 +1,4 @@
-package com.fikrisandi.pokemonapps
+package com.fikrisandi.pokemonapps.navigation
 
 import com.fikrisandi.detail.DetailNavGraph
 import com.fikrisandi.home.HomeNavGraph

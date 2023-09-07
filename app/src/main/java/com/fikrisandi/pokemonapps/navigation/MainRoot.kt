@@ -1,4 +1,4 @@
-package com.fikrisandi.pokemonapps
+package com.fikrisandi.pokemonapps.navigation
 
 import androidx.activity.compose.BackHandler
 import androidx.compose.foundation.layout.fillMaxSize

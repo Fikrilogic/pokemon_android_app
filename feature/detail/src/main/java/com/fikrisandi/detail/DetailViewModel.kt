@@ -14,16 +14,16 @@ class DetailViewModel @Inject constructor(private val getDetailPokemon: GetDetai
     override fun onTrigger(eventType: DetailEvent) {
         when (eventType) {
             is DetailEvent.LoadPokemonDetail -> {
-                loadPokemonDetail(eventType.id)
+                loadPokemonDetail(eventType.url)
             }
         }
     }
 
-    private fun loadPokemonDetail(id: Int) = safeLaunch {
+    private fun loadPokemonDetail(url: String) = safeLaunch {
         startLoading()
 
         val params = GetDetailPokemon.Params(
-            id = id
+            url = url
         )
 
         call(

@@ -14,6 +14,10 @@ interface PokemonService {
 
     @GET(POKEMON)
     suspend fun getPokemonList(
+    ):PokemonListResponse
+
+    @GET(POKEMON)
+    suspend fun getPokemonList(
         @Query("limit") limit: Int,
         @Query("offset") offset: Int,
     ):PokemonListResponse
@@ -22,6 +26,7 @@ interface PokemonService {
     suspend fun getPokemon(
         @Path("id") pokemonId: Int
     ): PokemonInfo
+
 
     @GET
     suspend fun getPokemon(

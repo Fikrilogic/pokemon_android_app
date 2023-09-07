@@ -20,12 +20,12 @@ fun DetailScreen(
     modifier: Modifier = Modifier,
     navigationProvider: NavigationProvider,
     viewModel: DetailViewModel = hiltViewModel(),
-    id: Int = 0,
+    url: String = "",
 ) {
     val state by viewModel.uiState.collectAsState()
 
     LaunchedEffect(key1 = Unit, block = {
-        if (state !is BaseUiState.Data) viewModel.onTrigger(DetailEvent.LoadPokemonDetail(id))
+        if (state !is BaseUiState.Data) viewModel.onTrigger(DetailEvent.LoadPokemonDetail(url))
     })
 
     DetailContent(modifier = modifier, navigationProvider = navigationProvider, state = state)

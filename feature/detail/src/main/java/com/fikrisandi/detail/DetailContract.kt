@@ -9,5 +9,5 @@ data class DetailState(
 
 sealed class DetailEvent {
 
-    data class LoadPokemonDetail(val id: Int) : DetailEvent()
+    data class LoadPokemonDetail(val url: String) : DetailEvent()
 }

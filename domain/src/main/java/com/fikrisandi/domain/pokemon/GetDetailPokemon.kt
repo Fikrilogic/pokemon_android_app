@@ -14,13 +14,13 @@ import javax.inject.Inject
 class GetDetailPokemon @Inject constructor(private val repository: PokemonRepository) :
     ReturnUseCase<GetDetailPokemon.Params, ApiState<PokemonDto>>() {
     data class Params(
-        val id: Int
+        val url: String = ""
     )
 
     override suspend fun execute(params: Params): Flow<ApiState<PokemonDto>> {
         return flow {
             try {
-                val data = repository.get(params.id)
+                val data = repository.get(params.url)
                 Log.e(this.classTag, "execute: $data ", )
                 emit(ApiState.Success(data.toDto()))
             } catch (e: Exception) {

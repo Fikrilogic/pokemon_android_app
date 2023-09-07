@@ -16,6 +16,10 @@ class PokemonRepositoryImpl @Inject constructor(
         return service.getPokemonList(limit, offset)
     }
 
+    override suspend fun getAll(): PokemonListResponse {
+        return service.getPokemonList()
+    }
+
     override suspend fun getAllLocal(): List<PokemonEntity> {
         return dao.getAll()
     }
@@ -31,6 +35,10 @@ class PokemonRepositoryImpl @Inject constructor(
 
     override suspend fun get(id: Int): PokemonInfo {
         return service.getPokemon(id)
+    }
+
+    override suspend fun get(url: String): PokemonInfo {
+        return service.getPokemon(url)
     }
 
     override suspend fun save(data: PokemonEntity) {

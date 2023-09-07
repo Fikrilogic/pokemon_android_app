@@ -15,7 +15,7 @@ class AppNavigationProvider(private val navController: NavController) : Navigati
         navController.navigate(HomeScreenDestination)
     }
 
-    override fun navigateToDetail(id: Int) {
-        navController.navigate(DetailScreenDestination.invoke(id = id))
+    override fun navigateToDetail(url: String) {
+        navController.navigate(DetailScreenDestination.invoke(url = url))
     }
 }

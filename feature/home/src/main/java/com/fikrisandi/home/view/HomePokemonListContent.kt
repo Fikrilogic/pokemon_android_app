@@ -36,7 +36,7 @@ fun HomePokemonListContent(
                     modifier = Modifier
                         .fillMaxWidth()
                         .padding(horizontal = 16.dp, vertical = 8.dp)
-                        .clickable { navController.navigateToDetail(it.id) },
+                        .clickable { navController.navigateToDetail(it.url) },
                     horizontalArrangement = Arrangement.spacedBy(16.dp, alignment = Alignment.Start)
                 ) {
                     Icon(painter = painterResource(R.drawable.ic_file),

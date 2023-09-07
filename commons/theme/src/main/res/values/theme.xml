@@ -5,8 +5,11 @@
         <item name="android:statusBarColor">@color/onPrimary</item>
     </style>
 
-    <style name="SplashScreenTheme" parent="Theme.PokemonApps">
-        <item name="android:windowBackground">@drawable/pokeball_icon</item>
+    <style name="SplashScreenTheme" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">@color/onPrimary</item>
+        <item name="windowSplashScreenAnimationDuration">800</item>
+        <item name="postSplashScreenTheme">@style/Theme.PokemonApps</item>>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/ic_pokeball</item>
     </style>
 
 </resources>

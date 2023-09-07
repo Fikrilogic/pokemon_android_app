@@ -169,6 +169,7 @@ fun DependencyHandler.addModule(){
 
     HOME
     DETAIL
+    SPLASH
 
 }
 
@@ -200,3 +201,5 @@ val DependencyHandler.HOME
     get() = implementation(project(mapOf("path" to ":feature:home")))
 val DependencyHandler.DETAIL
     get() = implementation(project(mapOf("path" to ":feature:detail")))
+val DependencyHandler.SPLASH
+    get() = implementation(project(mapOf("path" to ":feature:splashscreen")))

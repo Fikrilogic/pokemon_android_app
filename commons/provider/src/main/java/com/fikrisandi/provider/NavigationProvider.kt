@@ -7,7 +7,7 @@ interface NavigationProvider {
 
     fun navigateUp()
     fun navigateToHome()
-    fun navigateToDetail(id: Int)
+    fun navigateToDetail(url: String)
 
 }
 
@@ -19,7 +19,7 @@ class EmptyNavigationProvider: NavigationProvider{
 
     }
 
-    override fun navigateToDetail(id: Int) {
+    override fun navigateToDetail(url: String) {
     }
 
 

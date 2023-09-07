@@ -8,11 +8,11 @@ import com.fikrisandi.model.local.pokemon.PokemonEntity
 @Dao
 interface PokemonDao : BaseDao<PokemonEntity> {
 
-    @Query("SELECT * FROM ${PokemonEntity.NAME}")
+    @Query("SELECT DISTINCT * FROM ${PokemonEntity.NAME}")
     suspend fun getAll(): List<PokemonEntity>
 
     @Query(
-        "SELECT * FROM ${PokemonEntity.NAME} " +
+        "SELECT DISTINCT * FROM ${PokemonEntity.NAME} " +
                 "WHERE name LIKE '%' || :search || '%' OR :search = ''" +
                 "ORDER BY CASE WHEN :sort = 'ASC' THEN NAME END ASC," +
                 "CASE WHEN :sort = 'DESC' THEN NAME END DESC " +

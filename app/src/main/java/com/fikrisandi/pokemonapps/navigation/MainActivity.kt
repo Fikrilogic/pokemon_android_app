@@ -1,4 +1,4 @@
-package com.fikrisandi.pokemonapps
+package com.fikrisandi.pokemonapps.navigation
 
 import android.os.Bundle
 import android.widget.Toast
