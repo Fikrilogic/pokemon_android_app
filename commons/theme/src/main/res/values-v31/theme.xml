@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="SplashScreenTheme" parent="Theme.PokemonApps">
+        <item name="windowSplashScreenBackground">@color/onPrimary</item>
+        <item name="windowSplashScreenAnimationDuration">800</item>
+        <item name="postSplashScreenTheme">@style/Theme.PokemonApps</item>
+    </style>
+
+</resources>
